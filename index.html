@@ -1,0 +1,27 @@
+<html>
+<head>
+<style>
+textarea {
+  width: 100%;
+}
+
+#out {
+  margin-top: 20px;
+  font-size: 4vw;
+}
+</style>
+</head>
+<textarea id="input" onkeyup="update()">
+</textarea>
+<div id="out">
+</div>
+<script>
+const input = document.getElementById('input');
+const out = document.getElementById('out');
+
+function update() {
+  const value = input.value;
+  out.textContent = value.split("").reverse().join("");
+}
+</script>
+</html>
